@@ -35,15 +35,18 @@ function mount(vnode, container) {
 //unmount a virtual node from the dom
 function unmount(vnode) {
     //unmount the virtual node
+    vnode.el.parentNode.removeChild(vnode.el)
 }
 
 // compare difference two vnodes
 function patch(vnode1, vnode2) {
-    // doing it for all the children recursively
-    // where the nodes has different tags
-    // where the nodes are same tags
-    // where the new vnode has string children
-    // where the new vnode has array of vnodes
+    const el = (vnode2.el = vnode1.el)
+
+    // diffrent tag
+    if (vnode1.tag !== vnode1.tag){
+
+    }
+
 }
 
 module.exports = {

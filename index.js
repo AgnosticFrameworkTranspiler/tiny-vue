@@ -21,4 +21,30 @@ const node1 = h(
     ]
 )
 
+
+
+const node2 = h(
+    'div',
+    {
+        class: 'container'
+    },
+    [
+        h(
+            'h1',
+            null,
+            'bye world'
+        ),
+        h(
+            'p',
+            null,
+            'Ramin Rostami'
+        )
+
+    ]
+)
+
 mount(node1, document.getElementById('app'))
+
+setTimeout(() => {
+    unmount(node1)
+}, 4000)
