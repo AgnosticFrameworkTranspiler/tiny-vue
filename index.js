@@ -45,6 +45,12 @@ const node2 = h(
 
 mount(node1, document.getElementById('app'))
 
+// setTimeout(() => {
+//     unmount(node1)
+// }, 4000)
+
+
+
 setTimeout(() => {
-    unmount(node1)
+    patch(node1,node2)
 }, 4000)
